@@ -36,4 +36,37 @@
             border: none;
         }
     }
+    .loader {
+        display: none;
+    }
+    .apiData {
+        .mainInfo {
+            display: flex;
+            align-items: center;
+            background-color: $mainInfoBgColor;
+            padding: 30px;
+            color: $mainInfoTextColor;
+            border-radius: 10px;
+
+            .degrees {
+                display: flex;
+                font-size: 40px;
+                margin: 0 20px;
+
+                span {
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+            }
+            .info {
+                p {
+                    margin: 0 0 4px 0;
+
+                    &:last-of-type {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
 }
