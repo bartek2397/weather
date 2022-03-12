@@ -1,3 +1,11 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Sansita Swashed", cursive;
+}
+
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -280,4 +288,40 @@ summary {
   min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.weather {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.weather .title {
+  margin: 0 0 20px 0;
+  font-size: 60px;
+  color: #fff;
+}
+.weather .weatherForm {
+  max-width: 500px;
+  width: 100%;
+}
+.weather .weatherForm .city {
+  display: block;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  outline: none;
+  border-radius: 5px;
+  border: none;
 }
