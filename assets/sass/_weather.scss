@@ -19,11 +19,20 @@
         margin: 0 0 20px 0;
         font-size: 60px;
         color: $headerColor;
+
+        @media (max-width: 600px) {
+            @include fluid-type-container (42px, 60px)
+        }
     }
 
     .weatherForm {
         max-width: 500px;
         width: 100%;
+
+        @media (max-width: 600px) {
+            max-width: 90%;
+            margin: 0 10px;
+        }
 
         .city {
             display: block;
@@ -78,6 +87,24 @@
             border-radius: 10px;
             margin: 10px 0 0 0;
             text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .mainInfo {
+                margin: 0 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px;
+
+                span {
+                    font-size: 10px;
+                }
+            }
+            .days {
+                flex-direction: column;
+                padding: 10px;
+                margin: 10px 10px;
+            }
         }
     }
 }

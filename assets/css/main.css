@@ -311,9 +311,21 @@ summary {
   font-size: 60px;
   color: #fff;
 }
+@media (max-width: 600px) {
+  .weather .title {
+    font-size: 42px;
+    font-size: clamp(42px, 34.9756097561px + 2.1951219512vw, 60px);
+  }
+}
 .weather .weatherForm {
   max-width: 500px;
   width: 100%;
+}
+@media (max-width: 600px) {
+  .weather .weatherForm {
+    max-width: 90%;
+    margin: 0 10px;
+  }
 }
 .weather .weatherForm .city {
   display: block;
@@ -373,6 +385,28 @@ summary {
   border-radius: 10px;
   margin: 10px 0 0 0;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .weather .apiData .mainInfo {
+    margin: 0 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px;
+  }
+  .weather .apiData .mainInfo span {
+    font-size: 10px;
+  }
+  .weather .apiData .days {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    margin: 10px 10px;
+  }
 }
 
 .lds-dual-ring {
