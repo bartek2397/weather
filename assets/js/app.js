@@ -8,7 +8,15 @@ weatherForm.addEventListener('submit', (event) => {
     let userCity = document.querySelector('.city').value;
     let userApiURL = apiURL + userCity;
     fetch(userApiURL)
-    .then(response => response.json())
+    .then(response => {
+        
+        
+        if (response.status === 200) {
+            return response.json()
+        } else {
+            return showError()
+        }
+    })
     .then((dataFromAPI) => {
         hideLoader();
         // console.log(dataFromAPI.current.condition.text);
@@ -59,4 +67,8 @@ let showLoader = () => {
 }
 let hideLoader = () => {
     loader.style.display = 'none'
+}
+
+let showError = () => {
+    apiDataContainer.innerHTML = `<div class="error">City not found or we have problem with our API!</div>`
 }

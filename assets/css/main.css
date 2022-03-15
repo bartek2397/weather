@@ -408,6 +408,13 @@ summary {
     margin: 10px 10px;
   }
 }
+.weather .apiData .error {
+  background-color: #d81919;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
 
 .lds-dual-ring {
   display: inline-block;
